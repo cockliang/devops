@@ -35,9 +35,10 @@ pipeline {
         buildDiscarder(logRotator(numToKeepStr: '10'))
     }
     //定期检查开发代码更新，工作日每晚4点做daily build
-    triggers {
+    /* triggers {
         pollSCM('H 4 * * 1-5')
     }
+    */
     //pipeline的各个阶段场景
     stages {
         stage('代码获取') {
