@@ -96,9 +96,10 @@ pipeline {
             steps {
                 echo "starting deploy to ${serverIP}......"
                 //编译和打包
-                sh "mvn  -f ${params.pomPath} clean package -Dautoconfig.skip=true -Dmaven.test.skip=true"
                 /*
+                sh "mvn  -f ${params.pomPath} clean package -Dautoconfig.skip=true -Dmaven.test.skip=true"
                 archiveArtifacts warLocation
+
                 script {
                     wrap([$class: 'BuildUser']) {
                         //发布war包到指定服务器，虚拟机文件目录通过shell脚本初始化建立，所以目录是固定的
