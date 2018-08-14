@@ -8,6 +8,7 @@ pipeline {
             }
         }
     }
+
     post {
         always {
             sh 'Hello World'
