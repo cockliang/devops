@@ -43,6 +43,7 @@ pipeline {
         stage('代码获取') {
             steps {
                 //根据param.server分割获取参数,包括IP,jettyPort,username,password
+                /*
                 script {
                     def split=params.server.split(",")
                     serverIP=split[0]
@@ -50,6 +51,7 @@ pipeline {
                     serverName=split[2]
                     serverPasswd=split[3]
                 }
+                */
                 echo "starting fetchCode from ${params.repoUrl}......"
                 // Get some code from a GitHub repository
                 git credentialsId:CRED_ID, url:params.repoUrl, branch:params.repoBranch
