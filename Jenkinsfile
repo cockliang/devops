@@ -94,7 +94,7 @@ pipeline {
 
         stage('部署测试环境') {
             steps {
-                echo "starting deploy to ${serverIP}......"
+                echo "starting deploy to ......"
                 //编译和打包
                 /*
                 sh "mvn  -f ${params.pomPath} clean package -Dautoconfig.skip=true -Dmaven.test.skip=true"
