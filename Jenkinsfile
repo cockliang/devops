@@ -158,6 +158,8 @@ pipeline {
 
         stage('通知人工验收'){
             steps{
+                echo "通知人工验收......"
+                /*
                 script{
                     wrap([$class: 'BuildUser']) {
                         if(params.isCommitQA==false){
@@ -170,7 +172,8 @@ pipeline {
                         }
 
                     }
-                }
+
+                }*/
             }
         }
 
